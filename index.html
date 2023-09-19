@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JR Carpinteria Comercial</title>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mooli&display=swap">
+
+    <style>
+       
+        .welcome {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .carousel {
+            width: 80%;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel img {
+            width: 100%;
+            display: block;
+        }
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .carousel-button-prev {
+            left: 10px;
+        }
+
+        .carousel-button-next {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="articulo.html">Articulo</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="welcome">
+        <h1>JR Carpinteria Comercial</h1>
+        <p>Fabrica de muebles para comercios</p>
+    </div>
+
+    <div class="carousel">
+        <img src="img/image1.jpg" alt="Imagen 1">
+        <img src="img/image2.jpg" alt="Imagen 2">
+        <img src="img/image3.jpg" alt="Imagen 3">
+        <button class="carousel-button carousel-button-prev" onclick="prevImage()">Anterior</button>
+        <button class="carousel-button carousel-button-next" onclick="nextImage()">Siguiente</button>
+    </div>
+
+    <script>
+        // JavaScript para el carrusel de imágenes
+        let currentImage = 0;
+        const images = document.querySelectorAll('.carousel img');
+
+        function showImage(index) {
+            images.forEach((img, i) => {
+                img.style.display = i === index ? 'block' : 'none';
+            });
+        }
+
+        function nextImage() {
+            currentImage = (currentImage + 1) % images.length;
+            showImage(currentImage);
+        }
+
+        function prevImage() {
+            currentImage = (currentImage - 1 + images.length) % images.length;
+            showImage(currentImage);
+        }
+
+        showImage(currentImage);
+    </script>
+</body>
+</html>
