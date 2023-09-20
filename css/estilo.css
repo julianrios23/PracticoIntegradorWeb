@@ -28,6 +28,17 @@ nav a {
     color: #fff;
 }
 
+header nav ul li a {
+    text-decoration: none;
+    color: #fff; 
+    transition: color 0.3s ease;
+}
+
+
+header nav ul li a:hover {
+    color: #ffcc00; 
+}
+
 .welcome h1 {
     font-size: 70px; 
 }
@@ -81,6 +92,7 @@ nav a {
     margin-left: auto;
     margin-right: auto;
 }
+
 .info {
     background-color: #000; 
     color: #fff;
@@ -92,7 +104,7 @@ nav a {
 .info h2 {
     font-size: 20px;
     margin-bottom: 10px;
-    border-bottom: 1px solid #fff; 
+    
 }
 
 .info p {
