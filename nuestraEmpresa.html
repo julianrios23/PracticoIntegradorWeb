@@ -4,26 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<head>
     <title>JR Carpinteria Comercial</title>
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mooli&display=swap">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mooli&display=swap">
     <style>
-       
         .welcome {
             text-align: center;
             margin: 20px;
         }
-
+        .contenedor {
+            display: flex;
+            align-items: center;
+        }
+        .imagen-izquierda img {
+            max-width: 700px; /* Ancho máximo de la imagen */
+            float: left; /* Colocar la imagen a la izquierda */
+            margin-right: 20px; /* Espacio entre la imagen y el párrafo */
+        }
+        .texto-derecha {
+            float: left; /* Colocar el texto a la izquierda */
+            width: calc(100% - 320px); /* El ancho total menos el ancho de la imagen y el espacio */
+        }
+		
+		
     </style>
+	
+	
 </head>
 <body>
     <header>
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="articulo.html">Nuestra Empresa</a></li>
+                <li><a href="nuestraEmpresa.html">Nuestra Empresa</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
@@ -31,17 +44,62 @@
     
     <div class="welcome">
         <h1>JR Carpinteria Comercial</h1>
-        <p>Fabrica de mobiliario para comercios</p>
+        <p>Nuestra Empresa... Quienes somos...</p>
     </div>
-
-   
-	<div class="info">
-    <h2>TUDS - UNIVERSIDAD DE LA PUNTA - SAN LUIS</h2>
-    <p>Desarrollado por: Julian Rios - 2023</p>
-    <p>Mail:julianelsensei@gmail.com</p>
-    <p>Trabajo Práctico Integrador - WEB I - COM 2 </p>
+	
+	<div class="centro">
+        <p class="texto-centro">NUESTROS MUEBLES AYUDAN A CREAR ESPACIOS DONDE LAS PERSONAS PUEDEN COMPARTIR, INTERACTUAR Y
+		VIVIR EXPERIENCIAS DE COMPRA ÚNICAS. TODA NUESTRA FABRICACIÓN ESTÁ HECHA EN ARGENTINA COMBINANDO
+		EXPERIENCIA E INNOVACIÓN</p>
+    </div>
+    
+    <div class="contenedor">
+        <div class="imagen-izquierda">
+            <img src="https://www.jimarestanterias.com/wp-content/uploads/2018/03/design.jpg" alt="imagen">
+        </div>
+        <div class="texto-derecha">
+            <h1>1 - DISEÑAMOS TU PROYECTO</h1>
+			<p>Una vez contactamos y tenemos los datos del proyecto, así como las medidas del local 
+			y/o </p>
+			<p>los planos. Realizaremos un diseño en 3D, donde verás el resultado final. Puedes ver todos</p>
+			<p>nuestros proyectos.</p>
+        </div>
+    </div>
+	
+	
+	
+	<div class="contenedor">
+    <div class="imagen-izquierda">
+        <img src="https://www.jimarestanterias.com/wp-content/uploads/2018/03/maquina.jpg" alt="imagen">
+    </div>
+    <div class="texto-derecha">
+        <h1>2 - FABRICACIÓN A MEDIDA</h1>
+        <p>Una vez aprobado el proyecto, nos encargaremos de la fabricacion del mobiliario</p> comercial a medida, utilizando para ello, los mejores materiales y
+		las más avanzadas</p> <p>técnicas. Así nos aseguramos de que los productos cumplen con el nivel de calidad que</p>
+		<p>exigimos</p>
+    </div>
+	
 </div>
 
-   
+	
+	<div class="contenedor">
+        <div class="imagen-izquierda">
+            <img src="https://www.jimarestanterias.com/wp-content/uploads/2018/03/poducto.jpg" alt="imagen">
+        </div>
+        <div class="texto-derecha">
+            <h1>3 - MONTAJE RÁPIDO</h1>
+			<p>Por último, el montaje. También va de nuestra mano, ya que es otra parte fundamental</p>
+			<p>del proyecto. Un buen montaje limpio y rápido, es la última fase del trabajo. Con lo que</p> 
+			<p>terminamos nuestro servicio integral de diseño y desarrollo del espacio de tu negocio.</p>
+        </div>
+		
+    </div>
+	
+    <div class="info">
+        <h2>TUDS - UNIVERSIDAD DE LA PUNTA - SAN LUIS</h2>
+        <p>Desarrollado por: Julian Rios - 2023</p>
+        <p>Mail: julianelsensei@gmail.com</p>
+        <p>Trabajo Práctico Integrador - WEB I - COM 2</p>
+    </div>
 </body>
 </html>
