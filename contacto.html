@@ -45,7 +45,9 @@
     </div>
 	
 	<div class="centro">
-        <p class="texto-centro">¿Tiene alguna pregunta o comentario? No dudes en contactarnos. Estamos aquí para ayudarte.</p>
+        <p>¿Tiene alguna pregunta o comentario? </p>
+		<p>Necesita un presupuesto a medida?</p>
+		<p>Llene el formulario y lo contactaremos a la brevedad!! </p>
     </div>
 	<div class="welcome">
     <p>Formulario de Contacto</p>
@@ -60,6 +62,8 @@
         <label for="telefono">Teléfono:</label>
         <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9,12}" maxlength="12" required>
         <span>(Formato: 1234567890 sin espacios ni separador)</span>
+		<label for="consulta">Consulta:</label>
+		<textarea id="consulta" name="consulta" rows="4" required></textarea>
 
         <button type="submit">Enviar</button>
     </form>
@@ -72,48 +76,48 @@
     </div>
 
     <script>
-        const form = document.getElementById('contactForm');
-        const resultadoDiv = document.getElementById('resultado');
-        const nombreEnviado = document.getElementById('nombreEnviado');
-        const emailEnviado = document.getElementById('emailEnviado');
-        const telefonoEnviado = document.getElementById('telefonoEnviado');
+	const form = document.getElementById('contactForm');
+	const resultadoDiv = document.getElementById('resultado');
+	const nombreEnviado = document.getElementById('nombreEnviado');
+	const emailEnviado = document.getElementById('emailEnviado');
+	const telefonoEnviado = document.getElementById('telefonoEnviado');
+	const consultaEnviada = document.getElementById('consultaEnviada'); // Nuevo elemento para mostrar la consulta
 
-        form.addEventListener('submit', function (event) {
-            event.preventDefault();
+	form.addEventListener('submit', function (event) {
+		event.preventDefault();
 
-            
-            const nombre = form.nombre.value;
-            const email = form.email.value;
-            const telefono = form.telefono.value;
+		const nombre = form.nombre.value;
+		const email = form.email.value;
+		const telefono = form.telefono.value;
+		const consulta = form.consulta.value; // Obtén el valor del campo de consulta
 
-            
-            const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+		const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
-            
-            if (nombre === '' || email === '' || telefono === '') {
-                alert('Todos los campos son obligatorios.');
-            } else if (!email.match(emailRegex)) {
-                alert('El correo electrónico no es válido.');
-            } else {
-                
-                nombreEnviado.textContent = nombre;
-                emailEnviado.textContent = email;
-                telefonoEnviado.textContent = telefono;
-                resultadoDiv.style.display = 'block';
-                form.reset();
-            }
-        });
+		if (nombre === '' || email === '' || telefono === '' || consulta === '') { // Verifica si el campo de consulta está vacío
+			alert('Todos los campos son obligatorios.');
+		} else if (!email.match(emailRegex)) {
+			alert('El correo electrónico no es válido.');
+		} else {
+			nombreEnviado.textContent = nombre;
+			emailEnviado.textContent = email;
+			telefonoEnviado.textContent = telefono;
+			consultaEnviada.textContent = consulta; // Muestra la consulta
+			resultadoDiv.style.display = 'block';
+			form.reset();
+		}
+	});
+	
     </script>
    
     	
  <div class="columnas">
         <div class="columna">
-            <h4>TUDS - UNIVERSIDAD DE LA PUNTA - SAN LUIS</h4>
-            <h5>Trabajo Práctico Integrador - WEB I - COM 2<h5>
+            <h8>TUDS - Universidad de La Punta - San Luis</h8>
+            <h8>Trabajo Práctico Integrador - WEB I - COM 2<h8>
         </div>
         <div class="columna">
-            <h5>Desarrollado por Julian Rios - Todos los derechos resevados - 2023</h5>
-            <h5>Mail:julianelsensei@gmail.com</h5>
+            <h8>Desarrollado por Julian Rios - Todos los derechos resevados - 2023</h8>
+            <h8>Mail:julianelsensei@gmail.com</h8>
 			
         </div>
     </div>

@@ -25,12 +25,12 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: #fff;
+    color: #333;
 }
 
 header nav ul li a {
     text-decoration: none;
-    color: #fff; 
+    color: #333; 
     transition: color 0.3s ease;
 }
 
@@ -115,7 +115,7 @@ header nav ul li a:hover {
 
 .centro {
     background-color: #000; 
-    color: #fff; 
+    color: yellow; 
     padding: 15px;
     text-align: center; 
 	font-family: 'Mooli', sans-serif;
@@ -192,7 +192,7 @@ form h1 {
     font-size: 24px;
 }
 
-label, input, span {
+label, input, span, textarea { 
     display: block;
     margin-bottom: 10px;
     color: #fff;
@@ -200,7 +200,8 @@ label, input, span {
 
 input[type="text"],
 input[type="email"],
-input[type="tel"] {
+input[type="tel"],
+textarea[name="consulta"] {
     width: 100%;
     padding: 10px;
     border: none;
@@ -211,7 +212,8 @@ input[type="tel"] {
 
 input[type="text"]:focus,
 input[type="email"]:focus,
-input[type="tel"]:focus {
+input[type="tel"]:focus,
+input[type="text"][name="consulta"]:focus { 
     outline: none;
     box-shadow: 0 0 5px #ff0033;
 }
@@ -244,7 +246,21 @@ button[type="submit"]:hover {
     flex: 1;
     background-color: #000;
     padding: 20px;
-    border: 1px solid #ddd;
+    border-style: outset;
+
     margin: 10px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+
+
+.columna h8,
+.columna h8 {
+    text-align: center; 
+    margin: 10px 0; 
+	color: #888;
 }
+
+
