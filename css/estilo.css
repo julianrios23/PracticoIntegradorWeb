@@ -234,3 +234,17 @@ button[type="submit"]:hover {
     color: #ff0033;
 }
 
+.columnas {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.columna {
+    flex: 1;
+    background-color: #000;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin: 10px;
+    box-sizing: border-box;
+}
