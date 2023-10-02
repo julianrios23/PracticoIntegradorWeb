@@ -18,25 +18,9 @@
     text-align: center;
     margin: 20px;
     animation: title-enter 2s ease;
+           
 }
 
-@media screen and (min-width: 768px) {
-    .welcome {
-        animation: title-enter 2s ease;
-		}
-}
-.welcome h1 {
-    animation: title-enter 2s ease;
-}
-
-@keyframes title-enter {
-    from {
-        visibility: hidden;
-    }
-    to {
-        visibility: visible;
-    }
-}
 
 .carousel {
     width: 80%;
@@ -55,20 +39,26 @@
     top: 50%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px 20px;
+    color: lightcoral;
+    padding: 20px 30px;
     cursor: pointer;
-    border: none;
+    border: 2px solid white; 
     border-radius: 5px;
 }
 
+
 .carousel-button-prev {
-    left: 10px;
+    left: 25px;
 }
 
 .carousel-button-next {
-    right: 10px;
+    right: 25px;
 }
+p1 {
+    font-size: 15px;
+     color: lightcoral;
+  }    
+        
     </style>
 </head>
 <body>
@@ -92,11 +82,11 @@
 
 
     <div class="carousel">
-		<img class="imagen-reducida" src="https://www.jimarestanterias.com/wp-content/uploads/2021/04/mobiliario-para-tiendas7.jpeg" alt="Imagen 1">
+		<img class="imagen-reducida" src="https://www.jimarestanterias.com/wp-content/uploads/2021/02/mobiliario-para-farmacias6.jpg" alt="Imagen 1">
 		<img class="imagen-reducida" src="https://www.jimarestanterias.com/wp-content/uploads/2021/02/gondola5.jpg" alt="Imagen 2">
 		<img class="imagen-reducida" src="https://www.jimarestanterias.com/wp-content/uploads/2021/02/muebles-para-tiendas-de-alimentacion3-980x735.jpeg" alt="Imagen 3">
 		<img class="imagen-reducida" src="https://www.jimarestanterias.com/wp-content/uploads/2019/09/muebles-para-zapateria-980x735.jpg" alt="Imagen 4">
-		<img class="imagen-reducida" src="https://www.jimarestanterias.com/wp-content/uploads/2021/02/mobiliario-para-farmacias6.jpg" alt="Imagen 6">
+		<img class="imagen-reducida" src="https://www.jimarestanterias.com/wp-content/uploads/2021/04/mobiliario-para-tiendas7.jpeg" alt="Imagen 6">
 		<img class="imagen-reducida" src="https://www.jimarestanterias.com/wp-content/uploads/2019/11/mobiliario-para-opticas-8.jpg" alt="Imagen 7">
 		<img class="imagen-reducida" src="https://www.jimarestanterias.com/wp-content/uploads/2019/06/muebles-tienda-a-granel-1.jpg" alt="Imagen 8">
 				
@@ -116,6 +106,7 @@
 			
         </div>
     </div>
+
     <script>
 	
         
@@ -139,8 +130,7 @@
         }
 
         showImage(currentImage);
-		
-		
+			
 
     </script>
 

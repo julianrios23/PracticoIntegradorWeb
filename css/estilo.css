@@ -31,20 +31,18 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: #333;
+    color: lightcoral;
 }
-
 
 
 header nav ul li a {
     text-decoration: none;
-    color: #333; 
+    color: lightcoral; 
     transition: color 0.3s ease;
 }
 
-
 header nav ul li a:hover {
-    color: #ffcc00; 
+    color: gold; 
 }
 
 .welcome h1 {
@@ -54,9 +52,9 @@ header nav ul li a:hover {
 
 .welcome p {
     font-size: 28px; 
-	position: center;
+	position: center
+	
 }
-
 
 .carousel {
     width: 80%;
@@ -84,11 +82,11 @@ header nav ul li a:hover {
 }
 
 .carousel-button.prev {
-    left: 20px;
+    left: 50px;
 }
 
 .carousel-button.next {
-    right: 20px;
+    right: 50px;
 }
 
 .carousel-button:hover {
@@ -282,63 +280,7 @@ button[type="submit"]:hover {
     margin: 10px 0; 
 	color: #888;
 }
- p1 {
-    font-size: 15px;
-  }
+ 
 
 
 
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #000;
-    z-index: 999;
-    padding: 5px;
-    text-align: center;
-    transition: background-color 0.3s ease;
-}
-
-
-header nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-header nav li {
-    display: inline;
-    margin-right: 20px;
-}
-
-header nav a {
-    text-decoration: none;
-    color: #fff;
-}
-
-header nav ul li a {
-    text-decoration: none;
-    color: #fff; 
-    transition: color 0.3s ease;
-}
-
-header nav ul li a:hover {
-    color: #ffcc00; 
-}
-
-
-.welcome {
-    margin-top: 50px; 
-    text-align: center;
-    background-color: #000;
-    color: #fff;
-    padding: 20px;
-}
-
-.welcome #title {
-    font-size: 30px;
-}
-
-.welcome p {
-    font-size: 18px;
-}

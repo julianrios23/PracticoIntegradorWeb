@@ -11,6 +11,7 @@
         .welcome {
             text-align: center;
             margin: 20px;
+			
         }
 
         form {
@@ -50,6 +51,10 @@
             cursor: pointer;
             font-size: 18px;
         }
+        p1 {
+    font-size: 15px;
+     color: lightcoral;
+  }  
     </style>
 </head>
 <body>
@@ -89,7 +94,7 @@
 
         <label for="telefono">Teléfono:</label>
         <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9,12}" maxlength="12" required>
-        <span>(Formato: 1234567890 sin espacios ni separador)</span>
+        <span>(Solo números sin espacios ni separador)</span>
 
         <label for="consulta">Consulta:</label>
         <textarea id="consulta" name="consulta" rows="4" required></textarea>
