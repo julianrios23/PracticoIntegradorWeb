@@ -17,40 +17,44 @@
             align-items: center;
         }
         .imagen-izquierda img {
-            max-width: 700px; /* Ancho máximo de la imagen */
-            float: left; /* Colocar la imagen a la izquierda */
-            margin-right: 20px; /* Espacio entre la imagen y el párrafo */
+            max-width: 700px; 
+            float: left;
+            margin-right: 20px;
         }
         .texto-derecha {
-            float: left; /* Colocar el texto a la izquierda */
-            width: calc(100% - 320px); /* El ancho total menos el ancho de la imagen y el espacio */
+            float: left; 
+            width: calc(100% - 320px); 
         }
-		
-		
+			
     </style>
-	
+	<script>
+		
+		</script>
 	
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="nuestraEmpresa.html">Nuestra Empresa</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <div class="welcome">
-        <h1>JR Carpinteria Comercial</h1>
-        <p>Nuestra Empresa... Quienes somos...</p>
+    <div class="sticky-section">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nuestraEmpresa.html">Nuestra Empresa</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div class="welcome">
+            <h1 id="title">JR Carpinteria Comercial</h1>
+            <p>Fábrica de mobiliario para comercios</p>
+			<p>Nuestra empresa...Quienes somos?</p>
+        </div>
     </div>
 	
 	<div class="centro">
-        <p class="texto-centro">NUESTROS MUEBLES AYUDAN A CREAR ESPACIOS DONDE LAS PERSONAS PUEDEN COMPARTIR, INTERACTUAR Y
-		VIVIR EXPERIENCIAS DE COMPRA ÚNICAS. TODA NUESTRA FABRICACIÓN ESTÁ HECHA EN ARGENTINA COMBINANDO
-		EXPERIENCIA E INNOVACIÓN</p>
+       <p class="texto-centro" data-texto="NUESTROS MUEBLES AYUDAN A CREAR ESPACIOS DONDE LAS PERSONAS PUEDEN COMPARTIR, INTERACTUAR Y VIVIR EXPERIENCIAS DE COMPRA ÚNICAS.">
+</p>
+
     </div>
     
     <div class="contenedor">
@@ -98,14 +102,16 @@
    	
  <div class="columnas">
         <div class="columna">
-            <h8>TUDS - Universidad de La Punta - San Luis</h8>
-            <h8>Trabajo Práctico Integrador - WEB I - COM 2<h8>
+            <p1>TUDS - Universidad de La Punta - San Luis</p1>
+            <p1>Trabajo Práctico Integrador - WEB I - COM 2</p1>
         </div>
         <div class="columna">
-            <h8>Desarrollado por Julian Rios - Todos los derechos resevados - 2023</h8>
-            <h8>Mail:julianelsensei@gmail.com</h8>
+            <p1>Desarrollado por Julian Rios - Todos los derechos resevados - 2023</p1>
+            <p1>Mail:julianelsensei@gmail.com</p1>
 			
         </div>
     </div>
+	
+	
 </body>
 </html>

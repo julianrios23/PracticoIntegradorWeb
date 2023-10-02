@@ -8,50 +8,78 @@
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mooli&display=swap">
     <style>
-       .welcome {
+        .welcome {
             text-align: center;
             margin: 20px;
-        } 
-		
-		form {
+        }
+
+        form {
             max-width: 600px;
             margin: 0 auto;
+            position: relative;
         }
-        label, input, span {
+
+        label, input, textarea, span {
             display: block;
             margin-bottom: 10px;
         }
-        .error {
-            color: red;
+
+       
+        .enviado-msg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 255, 0, 0.7);
+            padding: 20px 30px;
+            border-radius: 5px;
+            display: none;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        
+        .cerrar-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: transparent;
+            color: black;
+            padding: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
         }
     </style>
-	
-	
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="nuestraEmpresa.html">Nuestra Empresa</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <div class="welcome">
-        <h1>JR Carpinteria Comercial</h1>
+    <div class="sticky-section">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nuestraEmpresa.html">Nuestra Empresa</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
         
+        <div class="welcome">
+            <h1 id="title">JR Carpinteria Comercial</h1>
+            <p>Fábrica de mobiliario para comercios</p>
+        </div>
     </div>
-	
-	<div class="centro">
-        <p>¿Tiene alguna pregunta o comentario? </p>
-		<p>Necesita un presupuesto a medida?</p>
-		<p>Llene el formulario y lo contactaremos a la brevedad!! </p>
+
+    <div class="centro">
+        <p>¿Tiene alguna pregunta o comentario?</p>
+        <p>Necesita un presupuesto a medida?</p>
+        <p>Llene el formulario y lo contactaremos a la brevedad!!</p>
     </div>
-	<div class="welcome">
-    <p>Formulario de Contacto</p>
-	</div>
+
+    <div class="welcome">
+        <p>Formulario de Contacto</p>
+    </div>
+
     <form id="contactForm">
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required>
@@ -62,66 +90,61 @@
         <label for="telefono">Teléfono:</label>
         <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9,12}" maxlength="12" required>
         <span>(Formato: 1234567890 sin espacios ni separador)</span>
-		<label for="consulta">Consulta:</label>
-		<textarea id="consulta" name="consulta" rows="4" required></textarea>
+
+        <label for="consulta">Consulta:</label>
+        <textarea id="consulta" name="consulta" rows="4" required></textarea>
+        <span class="error" id="consultaError"></span>
 
         <button type="submit">Enviar</button>
+
+        <div class="enviado-msg">
+            Su consulta fue enviada, le responderemos a la brevedad.
+            <button class="cerrar-btn" id="cerrarMsgBtn">X</button>
+        </div>
     </form>
 
-    <div id="resultado" style="display: none;">
-        <h2>Datos enviados:</h2>
-        <p>Nombre: <span id="nombreEnviado"></span></p>
-        <p>Correo Electrónico: <span id="emailEnviado"></span></p>
-        <p>Teléfono: <span id="telefonoEnviado"></span></p>
-    </div>
-
     <script>
-	const form = document.getElementById('contactForm');
-	const resultadoDiv = document.getElementById('resultado');
-	const nombreEnviado = document.getElementById('nombreEnviado');
-	const emailEnviado = document.getElementById('emailEnviado');
-	const telefonoEnviado = document.getElementById('telefonoEnviado');
-	const consultaEnviada = document.getElementById('consultaEnviada'); // Nuevo elemento para mostrar la consulta
+        const form = document.getElementById('contactForm');
+        const enviadoMsg = document.querySelector('.enviado-msg');
+        const cerrarMsgBtn = document.getElementById('cerrarMsgBtn'); 
 
-	form.addEventListener('submit', function (event) {
-		event.preventDefault();
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
 
-		const nombre = form.nombre.value;
-		const email = form.email.value;
-		const telefono = form.telefono.value;
-		const consulta = form.consulta.value; // Obtén el valor del campo de consulta
+            const nombre = form.nombre.value;
+            const email = form.email.value;
+            const telefono = form.telefono.value;
+            const consulta = form.consulta.value;
 
-		const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
-		if (nombre === '' || email === '' || telefono === '' || consulta === '') { // Verifica si el campo de consulta está vacío
-			alert('Todos los campos son obligatorios.');
-		} else if (!email.match(emailRegex)) {
-			alert('El correo electrónico no es válido.');
-		} else {
-			nombreEnviado.textContent = nombre;
-			emailEnviado.textContent = email;
-			telefonoEnviado.textContent = telefono;
-			consultaEnviada.textContent = consulta; // Muestra la consulta
-			resultadoDiv.style.display = 'block';
-			form.reset();
-		}
-	});
-	
+            if (nombre === '' || email === '' || telefono === '' || consulta === '') {
+                alert('Todos los campos son obligatorios.');
+            } else if (!email.match(emailRegex)) {
+                alert('El correo electrónico no es válido.');
+            } else {
+
+                enviadoMsg.style.display = 'block';
+                form.reset();
+            }
+        });
+
+        
+        cerrarMsgBtn.addEventListener('click', function () {
+            enviadoMsg.style.display = 'none';
+        });
     </script>
-   
-    	
- <div class="columnas">
+
+    <div class="columnas">
         <div class="columna">
-            <h8>TUDS - Universidad de La Punta - San Luis</h8>
-            <h8>Trabajo Práctico Integrador - WEB I - COM 2<h8>
+            <p1>TUDS - Universidad de La Punta - San Luis</p1>
+            <p1>Trabajo Práctico Integrador - WEB I - COM 2</p1>
         </div>
         <div class="columna">
-            <h8>Desarrollado por Julian Rios - Todos los derechos resevados - 2023</h8>
-            <h8>Mail:julianelsensei@gmail.com</h8>
+            <p1>Desarrollado por Julian Rios - Todos los derechos resevados - 2023</p1>
+            <p1>Mail:julianelsensei@gmail.com</p1>
 			
         </div>
     </div>
-	
-   
 </body>
 </html>

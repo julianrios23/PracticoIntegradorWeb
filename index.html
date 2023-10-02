@@ -5,67 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	
+	
 <head>
     <title>Inicio - JR Carpinteria Comercial</title>
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mooli&display=swap">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mooli&display=swap">
+	
 
     <style>
        
         .welcome {
-            text-align: center;
-            margin: 20px;
-        }
+    text-align: center;
+    margin: 20px;
+    animation: title-enter 2s ease;
+}
 
-        .carousel {
-            width: 80%;
-            margin: 0 auto;
-            position: relative;
-            overflow: hidden;
-        }
+@media screen and (min-width: 768px) {
+    .welcome {
+        animation: title-enter 2s ease;
+		}
+}
+.welcome h1 {
+    animation: title-enter 2s ease;
+}
 
-        .carousel img {
-            width: 100%;
-            display: block;
-        }
+@keyframes title-enter {
+    from {
+        visibility: hidden;
+    }
+    to {
+        visibility: visible;
+    }
+}
 
-        .carousel-button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            padding: 10px 20px;
-            cursor: pointer;
-            border: none;
-            border-radius: 5px;
-        }
+.carousel {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
 
-        .carousel-button-prev {
-            left: 10px;
-        }
+.carousel img {
+    width: 100%;
+    display: block;
+}
 
-        .carousel-button-next {
-            right: 10px;
-        }
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.carousel-button-prev {
+    left: 10px;
+}
+
+.carousel-button-next {
+    right: 10px;
+}
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="nuestraEmpresa.html">Nuestra Empresa</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-	<div class="welcome">
-	<h1 id="title">JR Carpinteria Comercial</h1>
-		<p>Fábrica de mobiliario para comercios</p>
-	</div>
+    <div>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nuestraEmpresa.html">Nuestra Empresa</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div class="welcome">
+            <h1 id="title">JR Carpinteria Comercial</h1>
+            <p>Fábrica de mobiliario para comercios</p>
+        </div>
+    </div>
 
 
 
@@ -85,12 +107,12 @@
 	
  <div class="columnas">
         <div class="columna">
-            <h8>TUDS - Universidad de La Punta - San Luis</h8>
-            <h8>Trabajo Práctico Integrador - WEB I - COM 2<h8>
+            <p1>TUDS - Universidad de La Punta - San Luis</p1>
+            <p1>Trabajo Práctico Integrador - WEB I - COM 2</p1>
         </div>
         <div class="columna">
-            <h8>Desarrollado por Julian Rios - Todos los derechos resevados - 2023</h8>
-            <h8>Mail:julianelsensei@gmail.com</h8>
+            <p1>Desarrollado por Julian Rios - Todos los derechos resevados - 2023</p1>
+            <p1>Mail:julianelsensei@gmail.com</p1>
 			
         </div>
     </div>
