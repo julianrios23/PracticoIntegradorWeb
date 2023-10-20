@@ -61,7 +61,10 @@ header nav ul li a:hover {
     margin: 0 auto;
     position: relative;
     overflow: hidden;
+    
+  
 }
+
 
 .carousel img {
     width: 100%;
@@ -237,7 +240,7 @@ input[type="text"][name="consulta"]:focus {
 }
 
 button[type="submit"] {
-    background-color: #ff0033;
+    background-color: red;
     color: #fff;
     border: none;
     border-radius: 5px;
