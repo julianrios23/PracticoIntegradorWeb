@@ -125,13 +125,14 @@
             const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
             if (nombre === '' || email === '' || telefono === '' || consulta === '') {
-                alert('Todos los campos son obligatorios.');
+            const errorElement = document.getElementById('consultaError');
+            errorElement.textContent = 'Todos los campos son obligatorios.';
             } else if (!email.match(emailRegex)) {
-                alert('El correo electrónico no es válido.');
+            const errorElement = document.getElementById('consultaError');
+            errorElement.textContent = 'El correo electrónico no es válido.';
             } else {
-
-                enviadoMsg.style.display = 'block';
-                form.reset();
+            enviadoMsg.style.display = 'block';
+            form.reset();
             }
         });
 
